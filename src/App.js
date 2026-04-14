@@ -1,16 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import BookingPage from "./pages/BookingPage";
 import Nav from "./components/Nav";
+import Main from "./Main";
+import ConfirmedBooking from "./pages/ConfirmedBooking";
 
 function App() {
     return (
         <>
             <Nav />
-
             <Routes>
                 <Route path="/" element={<Homepage />} />
-                <Route path="/booking" element={<BookingPage />} />
+                <Route path="/booking" element={<Main />} />
+                <Route path="/confirmed" element={<ConfirmedBooking />} />
             </Routes>
         </>
     );
