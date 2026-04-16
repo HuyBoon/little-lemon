@@ -2,14 +2,16 @@ import BookingForm from "../components/BookingForm";
 
 function BookingPage({ availableTimes, dispatch, submitForm }) {
     return (
-        <div>
-            <h1>Book a Table</h1>
-            <BookingForm
-                availableTimes={availableTimes}
-                dispatch={dispatch}
-                submitForm={submitForm}
-            />
-        </div>
+        <main>
+            <section>
+                <h1>Book a Table</h1>
+                <BookingForm
+                    availableTimes={availableTimes}
+                    dispatch={dispatch}
+                    submitForm={submitForm}
+                />
+            </section>
+        </main>
     );
 }
 export default BookingPage;

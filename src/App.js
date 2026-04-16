@@ -7,7 +7,9 @@ import ConfirmedBooking from "./pages/ConfirmedBooking";
 function App() {
     return (
         <>
-            <Nav />
+            <header>
+                <Nav />
+            </header>
             <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/booking" element={<Main />} />

@@ -25,6 +25,8 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
         submitForm(formData);
     };
 
+    const isFormValid = date !== "" && guests >= 1;
+
     return (
         <form
             onSubmit={handleSubmit}
@@ -36,6 +38,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                 id="res-date"
                 value={date}
                 onChange={handleDateChange}
+                required
             />
 
             <label htmlFor="res-time">Choose time</label>
@@ -43,29 +46,40 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
                 id="res-time"
                 value={time}
                 onChange={(e) => setTime(e.target.value)}
+                required
             >
                 {availableTimes.map((t) => (
-                    <option key={t}>{t}</option>
+                    <option key={t} value={t}>
+                        {t}
+                    </option>
                 ))}
             </select>
 
             <label htmlFor="guests">Number of guests</label>
             <input
                 type="number"
+                id="guests"
                 value={guests}
+                min="1"
+                max="10"
                 onChange={(e) => setGuests(Number(e.target.value))}
+                required
             />
 
             <label htmlFor="occasion">Occasion</label>
             <select
+                id="occasion"
                 value={occasion}
                 onChange={(e) => setOccasion(e.target.value)}
+                required
             >
-                <option>Birthday</option>
-                <option>Anniversary</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Anniversary">Anniversary</option>
             </select>
 
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={!isFormValid} aria-label="On Click">
+                Submit
+            </button>
         </form>
     );
 }
