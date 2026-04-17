@@ -1,0 +1,62 @@
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: var(--max-width); /* Sử dụng biến từ App.css hoặc dùng 1200px */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 40px;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navLinks a:hover {
+    color: var(--primary-green);
+}
+
+/* Nút Login màu vàng */
+.loginBtn {
+    background-color: #f4ce14;
+    color: #333333 !important;
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-weight: 800;
+    transition: background-color 0.3s;
+}
+
+.loginBtn:hover {
+    background-color: #edbf05;
+}
+
+/* Responsive cho Mobile */
+@media (max-width: 768px) {
+    .navLinks {
+        display: none; /* Bạn có thể bổ sung Hamburger Menu ở đây sau */
+    }
+}

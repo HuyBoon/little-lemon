@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import BookingPage from "./pages/BookingPage";
-import { fetchAPI, submitAPI } from "./api";
+import { fetchAPI, submitAPI } from "./utils/api";
 
 export function updateTimes(state, action) {
     return fetchAPI(action);

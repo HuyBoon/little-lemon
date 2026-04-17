@@ -1,18 +1,17 @@
-import CallToAction from "../components/CallToAction";
-import Specials from "../components/Specials";
-import CustomersSay from "../components/CustomersSay";
-import Chicago from "../components/Chicago";
+import CallToAction from "../components/hero/CallToAction";
+import Specials from "../components/specials/Specials";
+import Chicago from "../components/about/Chicago";
 
 function Homepage() {
     return (
         <main>
             <CallToAction />
             <Specials />
-            <CustomersSay />
-            <Chicago />
+            <section id="about">
+                <Chicago />
+            </section>
         </main>
     );
 }
 
 export default Homepage;
-     

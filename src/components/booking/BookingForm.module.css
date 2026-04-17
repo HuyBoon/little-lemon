@@ -1,0 +1,53 @@
+.formContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: "Karla", sans-serif;
+}
+
+.sectionTitle {
+    font-family: "Markazi Text", serif;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.gridFields {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+.submitBtn {
+    background-color: #495e57;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    border: none;
+    transition: 0.3s;
+}
+
+.submitBtn:disabled {
+    background-color: #9daaa5;
+    cursor: not-allowed;
+}
